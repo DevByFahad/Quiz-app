@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next-Level Quiz App - Ultra Premium</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Animated Gradient Background -->
+    <div class="background"></div>
+
+    <!-- Quiz Container -->
+    <div class="quiz-container glass-card" id="quizContainer">
+        <div class="quiz-header">
+            <h1>Next-Level Quiz</h1>
+            <div class="progress-text">Question <span id="current">1</span> of <span id="total">5</span></div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress"></div>
+            </div>
+        </div>
+
+        <div class="quiz-body">
+            <div id="question" class="question"></div>
+            <ul id="options" class="options"></ul>
+        </div>
+
+        <div class="quiz-footer">
+            <button id="prevBtn" class="nav-btn">Previous</button>
+            <button id="nextBtn" class="nav-btn">Next</button>
+        </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div class="result-container glass-card hidden" id="resultScreen">
+        <h2>Quiz Completed!</h2>
+        <p>Your Score: <span id="score"></span>/<span id="totalQuestions"></span></p>
+        <p>Percentage: <span id="percentage"></span>%</p>
+        <h3 id="resultMessage"></h3>
+        <button id="restartBtn" class="nav-btn">Restart Quiz</button>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

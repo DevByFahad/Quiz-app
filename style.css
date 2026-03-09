@@ -1,0 +1,203 @@
+/* Root Variables */
+:root {
+    --primary-color: #00ff7f;
+    --secondary-color: #003300;
+    --accent-color: #00cc44;
+    --text-color: #ffffff;
+    --glass-bg: rgba(0, 50, 0, 0.2);
+    --blur: 20px;
+    --radius: 20px;
+    --transition: 0.3s ease;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #001a00;
+    overflow: hidden;
+}
+
+/* Animated Gradient Background */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(-45deg, #006600, #00ff7f, #003300, #00cc44);
+    background-size: 400% 400%;
+    animation: gradientAnimation 20s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Glass Card */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--blur));
+    border-radius: var(--radius);
+    padding: 2rem;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    color: var(--text-color);
+    text-align: center;
+    transition: transform var(--transition), opacity var(--transition);
+}
+
+/* Quiz Header */
+.quiz-header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    text-shadow: 0 0 10px #00ff7f;
+}
+
+.progress-text {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+/* Quiz Body */
+.quiz-body {
+    margin: 1rem 0;
+}
+
+.question {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.options {
+    list-style: none;
+}
+
+.options li {
+    background: rgba(255, 255, 255, 0.05);
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all var(--transition);
+    position: relative;
+    font-weight: 500;
+}
+
+.options li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+.options li.selected {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.options li.correct {
+    background: #00ff00;
+    color: #003300;
+}
+
+.options li.wrong {
+    background: #ff0000;
+    color: #330000;
+}
+
+/* Buttons */
+.nav-btn {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    transition: all var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-btn:hover {
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+/* Result Screen */
+.result-container.hidden {
+    display: none;
+}
+
+.result-container h2 {
+    margin-bottom: 1rem;
+}
+
+.result-container h3 {
+    margin: 1rem 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media(max-width: 480px) {
+    .glass-card {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .nav-btn {
+        padding: 0.6rem 1rem;
+        margin: 0.3rem;
+    }
+}
+
+/* Confetti Canvas */
+#confettiCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
