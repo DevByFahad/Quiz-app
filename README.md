@@ -4,7 +4,7 @@ A simple and interactive **Quiz App** that allows users to test their knowledge 
 
 ---
 
-🔗 **Live Demo:** [Click Here](https://devbyfahad.github.io/Quiz-app/)
+🔗 **Live Demo:** (https://devbyfahad.github.io/Quiz-app/)
 
 ---
 
