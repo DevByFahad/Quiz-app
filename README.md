@@ -4,7 +4,7 @@ A simple and interactive **Quiz App** that allows users to test their knowledge 
 
 ---
 
-🔗 **Live Demo:** https://DevByFahad.github.io/Quiz-app/
+🔗 **Live Demo:** https://DevByFahad.github.io/quiz-app/
 
 ---
 
@@ -85,4 +85,4 @@ If you like this project, consider giving it a **star** on GitHub!
 
 Here’s what it looks like 👇
 
-![Quiz App Screenshot](quiz-screenshot.png)
+![Quiz App Screenshot](screenshot.png)
